@@ -11,7 +11,10 @@ class Initialize extends Command
 
     public function handle()
     {
+
+        $this->info('----------------------------');
         $this->info('Creating AbstractRepository');
+        $this->info('----------------------------');
 
         $create_dir_abstract_repository = mkdir(base_path('/app/Contracts/Repository/'), 0777, true);
 
@@ -26,11 +29,17 @@ class Initialize extends Command
             $this->error('Error writing code in AbstractRepository');
             return;
         }
-
+        $this->info('----------------------------');
         $this->info('AbstractRepository created');
+        $this->info('----------------------------');
         $this->info('Creating CustomException');
+        $this->info('----------------------------');
 
-        $create_dir_custom_exceptions = mkdir(base_path('/app/Exceptions/'), 0777, true);
+
+        $create_dir_custom_exceptions = base_path('/app/Exceptions/');
+
+        if (!file_exists(base_path('/app/Exceptions/')))
+            $create_dir_custom_exceptions = mkdir(base_path('/app/Exceptions/'), 0777, true);
 
         if (!$create_dir_custom_exceptions) {
             $this->error('Error creating dir for CustomException');
@@ -44,10 +53,16 @@ class Initialize extends Command
             return;
         }
 
+        $this->info('----------------------------');
         $this->info('CustomException created');
+        $this->info('----------------------------');
         $this->info('Creating UserModel');
+        $this->info('----------------------------');
 
-        $create_dir_user_model = mkdir(base_path('/app/Models/User/'), 0777, true);
+        $create_dir_user_model = base_path('/app/Models/User/');
+
+        if (!file_exists(base_path('/app/Models/User/')))
+            $create_dir_user_model = mkdir(base_path('/app/Models/User/'), 0777, true);
 
         if (!$create_dir_user_model) {
             $this->error('Error creating dir for UserModel');
@@ -61,10 +76,17 @@ class Initialize extends Command
             return;
         }
 
+        $this->info('----------------------------');
         $this->info('UserModel created');
+        $this->info('----------------------------');
         $this->info('Creating UserService');
+        $this->info('----------------------------');
 
-        $create_dir_user_service = mkdir(base_path('/app/Services/User/'), 0777, true);
+        $create_dir_user_service = base_path('/app/Services/User/');
+
+        if (!file_exists(base_path('/app/Services/User/')))
+            $create_dir_user_service = mkdir(base_path('/app/Services/User/'), 0777, true);
+
 
         if (!$create_dir_user_service) {
             $this->error('Error creating dir for UserService');
@@ -78,8 +100,11 @@ class Initialize extends Command
             return;
         }
 
+        $this->info('----------------------------');
         $this->info('UserService created');
+        $this->info('----------------------------');
         $this->info('Creating UserRepository');
+        $this->info('----------------------------');
 
         $create_dir_user_repositories = mkdir(base_path('/app/Repositories/User/'), 0777, true);
 
@@ -95,6 +120,9 @@ class Initialize extends Command
             return;
         }
 
+        $this->info('----------------------------');
         $this->info('UserRepository created');
+        $this->info('----------------------------');
+        $this->info('Command executed successfully');
     }
 }
