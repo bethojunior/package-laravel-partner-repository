@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Bethojunior\\Partnerrepository\\' => array($baseDir . '/src'),
+    'bethojunior\\partnerrepository\\' => array($baseDir . '/src'),
 );
