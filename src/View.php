@@ -46,7 +46,7 @@ class PartnerRepository extends Command
             return;
         }
     
-        $write_in_abstract_repository = touch(base_path('/app/Contracts/Repository/AbstractRepository.php'));
+        $write_in_abstract_repository = touch(base_path('/app/Contracts/Repository/AbstractRepository.txt'));
     
         if (!$write_in_abstract_repository) {
             $this->error('Error writing code in AbstractRepository');

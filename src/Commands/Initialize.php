@@ -25,10 +25,18 @@ class Initialize extends Command
 
         $write_in_abstract_repository = touch(base_path('/app/Contracts/Repository/AbstractRepository.php'));
 
-        if (!$write_in_abstract_repository) {
+        $filePath = base_path('/app/Contracts/Repository/AbstractRepository.php');
+        $newFilePath = base_path('/files/AbstractRepository.txt');
+
+        $fill = file_get_contents($filePath);
+    
+        $fill_file = file_put_contents($newFilePath, $fill);
+
+        if (!$write_in_abstract_repository || !$fill_file) {
             $this->error('Error writing code in AbstractRepository');
             return;
         }
+        
         $this->info('----------------------------');
         $this->info('AbstractRepository created');
         $this->info('----------------------------');
@@ -48,7 +56,14 @@ class Initialize extends Command
 
         $write_in_custom_exceptions = touch(base_path('/app/Exceptions/CustomException.php'));
 
-        if (!$write_in_custom_exceptions) {
+        $filePath = base_path('/app/Exceptions/CustomException.php');
+        $newFilePath = base_path('/files/CustomException.txt');
+
+        $fill = file_get_contents($filePath);
+
+        $fill_file = file_put_contents($newFilePath, $fill);
+
+        if (!$write_in_custom_exceptions || !$fill_file) {
             $this->error('Error writing code in CustomException');
             return;
         }
@@ -95,7 +110,14 @@ class Initialize extends Command
 
         $write_in_user_service = touch(base_path('/app/Services/User/UserService.php'));
 
-        if (!$write_in_user_service) {
+        $filePath = base_path('/app/Services/User/UserService.php');
+        $newFilePath = base_path('/files/UserService.txt');
+
+        $fill = file_get_contents($filePath);
+
+        $fill_file = file_put_contents($newFilePath, $fill);
+
+        if (!$write_in_user_service || !$fill_file) {
             $this->error('Error writing code in UserService');
             return;
         }
@@ -115,10 +137,19 @@ class Initialize extends Command
 
         $write_in_user_repository = touch(base_path('/app/Repositories/User/UserRepository.php'));
 
-        if (!$write_in_user_repository) {
+        $filePath = base_path('/app/Repositories/User/UserRepository.php');
+        $newFilePath = base_path('/files/UserRepository.txt');
+
+        $fill = file_get_contents($filePath);
+
+        $fill_file = file_put_contents($newFilePath, $fill);
+
+        if (!$write_in_user_repository || !$fill_file) {
             $this->error('Error writing code in UserRepository');
             return;
         }
+
+
 
         $this->info('----------------------------');
         $this->info('UserRepository created');
