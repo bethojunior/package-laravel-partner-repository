@@ -1,18 +1,9 @@
 {
     "name": "bethojunior/partnerrepository",
     "description": "Laravel command to create applications in the partner repository",
-    "version": "1.0.0",
     "type": "library",
+    "version": "1.0.0",
     "license": "GPL-3.0-or-later",
-    "authors": [
-        {
-            "name": "bethojunior",
-            "email": "hgomescostajr@gmail.com"
-        }
-    ],
-    "require": {
-        "php": ">=7.4"
-    },
     "autoload": {
         "psr-4": {
             "bethojunior\\partnerrepository\\": "src/"
@@ -23,5 +14,14 @@
             "@php src/init.php"
         ]
     },
-    "minimum-stability": "dev"
+    "authors": [
+        {
+            "name": "bethojunior",
+            "email": "hgomescostajr@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4"
+    }
 }
