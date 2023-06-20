@@ -25,14 +25,7 @@ class Initialize extends Command
 
         $write_in_abstract_repository = touch(base_path('/app/Contracts/Repository/AbstractRepository.php'));
 
-        $filePath = base_path('/app/Contracts/Repository/AbstractRepository.php');
-        $newFilePath = '../files/AbstractRepository.txt';
-
-        $fill = file_get_contents($filePath);
-    
-        $fill_file = file_put_contents($newFilePath, $fill);
-
-        if (!$write_in_abstract_repository || !$fill_file) {
+        if (!$write_in_abstract_repository) {
             $this->error('Error writing code in AbstractRepository');
             return;
         }
@@ -56,14 +49,7 @@ class Initialize extends Command
 
         $write_in_custom_exceptions = touch(base_path('/app/Exceptions/CustomException.php'));
 
-        $filePath = base_path('/app/Exceptions/CustomException.php');
-        $newFilePath = '../files/CustomException.txt';
-
-        $fill = file_get_contents($filePath);
-
-        $fill_file = file_put_contents($newFilePath, $fill);
-
-        if (!$write_in_custom_exceptions || !$fill_file) {
+        if (!$write_in_custom_exceptions) {
             $this->error('Error writing code in CustomException');
             return;
         }
@@ -110,14 +96,7 @@ class Initialize extends Command
 
         $write_in_user_service = touch(base_path('/app/Services/User/UserService.php'));
 
-        $filePath = base_path('/app/Services/User/UserService.php');
-        $newFilePath = '../files/UserService.txt';
-
-        $fill = file_get_contents($filePath);
-
-        $fill_file = file_put_contents($newFilePath, $fill);
-
-        if (!$write_in_user_service || !$fill_file) {
+        if (!$write_in_user_service) {
             $this->error('Error writing code in UserService');
             return;
         }
@@ -137,20 +116,12 @@ class Initialize extends Command
 
         $write_in_user_repository = touch(base_path('/app/Repositories/User/UserRepository.php'));
 
-        $filePath = base_path('/app/Repositories/User/UserRepository.php');
-        $newFilePath = '../files/UserRepository.txt';
-
-        $fill = file_get_contents($filePath);
-
-        $fill_file = file_put_contents($newFilePath, $fill);
-
-        if (!$write_in_user_repository || !$fill_file) {
+        if (!$write_in_user_repository) {
             $this->error('Error writing code in UserRepository');
             return;
         }
 
-
-
+        
         $this->info('----------------------------');
         $this->info('UserRepository created');
         $this->info('----------------------------');
