@@ -2,7 +2,7 @@
     "name": "bethojunior/partnerrepository",
     "description": "Add command artisan for create complet view(css, js (modules, controllers) and view(blade) ) by Laravel",
     "require": {
-        "php": "^7.2"
+        "php": "^8.0"
     },
     "autoload": {
         "psr-4": {
