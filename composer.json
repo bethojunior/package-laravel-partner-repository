@@ -1,8 +1,9 @@
 {
     "name": "bethojunior/partnerrepository",
-    "description": "Add command artisan for create complet view(css, js (modules, controllers) and view(blade) ) by Laravel",
+    "description": "Laravel command to create applications in the partner repository",
+    "version": "0.0.1",
     "require": {
-        "php": "^8.0"
+        "php": ">=7.4"
     },
     "autoload": {
         "psr-4": {
