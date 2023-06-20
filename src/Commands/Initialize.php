@@ -30,7 +30,6 @@ class Initialize extends Command
             return;
         }
         
-        $this->info('----------------------------');
         $this->info('AbstractRepository created');
         $this->info('----------------------------');
         $this->info('Creating CustomException');
@@ -54,7 +53,6 @@ class Initialize extends Command
             return;
         }
 
-        $this->info('----------------------------');
         $this->info('CustomException created');
         $this->info('----------------------------');
         $this->info('Creating UserModel');
@@ -77,7 +75,6 @@ class Initialize extends Command
             return;
         }
 
-        $this->info('----------------------------');
         $this->info('UserModel created');
         $this->info('----------------------------');
         $this->info('Creating UserService');
@@ -101,7 +98,6 @@ class Initialize extends Command
             return;
         }
 
-        $this->info('----------------------------');
         $this->info('UserService created');
         $this->info('----------------------------');
         $this->info('Creating UserRepository');
@@ -122,7 +118,6 @@ class Initialize extends Command
         }
 
 
-        $this->info('----------------------------');
         $this->info('UserRepository created');
         $this->info('----------------------------');
 
@@ -132,6 +127,33 @@ class Initialize extends Command
         $textAbstractRepository = $path.'AbstractRepository.txt';
         $fillAbstractRepository = file_get_contents($textAbstractRepository);
         file_put_contents($abstractRepository, $fillAbstractRepository);
+
+        $this->info('UserRepository populated');
+        $this->info('----------------------------');
+
+        $customException = base_path('/app/Exceptions/CustomException.php');
+        $textCustomException = $path.'CustomException.txt';
+        $fillCustomException = file_get_contents($textCustomException);
+        file_put_contents($customException, $fillCustomException);
+
+        $this->info('CustomException populated');
+        $this->info('----------------------------');
+
+        $userService = base_path('/app/Services/User/UserService.php');
+        $textUserService = $path.'UserService.txt';
+        $fillUserService = file_get_contents($textUserService);
+        file_put_contents($userService, $fillUserService);
+
+        $this->info('UserService populated');
+        $this->info('----------------------------');
+
+        $userRepository = base_path('/app/Repositories/User/UserRepository.php');
+        $textUserRepository = $path.'UserRepository.txt';
+        $fillUserRepository = file_get_contents($textUserRepository);
+        file_put_contents($userRepository, $fillUserRepository);
+
+        $this->info('UserService populated');
+        $this->info('----------------------------');
 
 
         $this->info('Command executed successfully');
