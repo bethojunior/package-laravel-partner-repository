@@ -12,6 +12,9 @@
     "scripts": {
         "post-package-install": [
             "@php src/init.php"
+        ],
+        "post-install-cmd": [
+            "bethojunior\\partnerrepository\\Start::run"
         ]
     },
     "authors": [
