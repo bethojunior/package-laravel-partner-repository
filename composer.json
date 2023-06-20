@@ -1,8 +1,15 @@
 {
     "name": "bethojunior/partnerrepository",
     "description": "Laravel command to create applications in the partner repository",
-    "type": "composer-plugin",
     "version": "1.0.0",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "bethojunior",
+            "email": "hgomescostajr@gmail.com"
+        }
+    ],
     "require": {
         "php": ">=7.4"
     },
@@ -11,12 +18,6 @@
             "bethojunior\\partnerrepository\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "bethojunior",
-            "email": "hgomescostajr@gmail.com"
-        }
-    ],
     "scripts": {
         "post-package-install": [
             "@php src/init.php"
