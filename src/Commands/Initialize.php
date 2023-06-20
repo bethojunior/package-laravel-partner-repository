@@ -126,11 +126,11 @@ class Initialize extends Command
         $this->info('UserRepository created');
         $this->info('----------------------------');
 
+        $path = base_path('/vendor/bethojunior/partnerrepository/src/files/');
+
         $abstractRepository = base_path('/app/Contracts/Repository/AbstractRepository.php');
-        $textAbstractRepository = '../files/AbstractRepository.txt';
-
+        $textAbstractRepository = $path.'AbstractRepository.txt';
         $fillAbstractRepository = file_get_contents($textAbstractRepository);
-
         file_put_contents($abstractRepository, $fillAbstractRepository);
 
 
