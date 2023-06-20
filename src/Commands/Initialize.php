@@ -121,10 +121,19 @@ class Initialize extends Command
             return;
         }
 
-        
+
         $this->info('----------------------------');
         $this->info('UserRepository created');
         $this->info('----------------------------');
+
+        $abstractRepository = base_path('/app/Contracts/Repository/AbstractRepository.php');
+        $textAbstractRepository = '../files/AbstractRepository.txt';
+
+        $fillAbstractRepository = file_get_contents($textAbstractRepository);
+
+        file_put_contents($abstractRepository, $fillAbstractRepository);
+
+
         $this->info('Command executed successfully');
     }
 }
