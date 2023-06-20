@@ -7,17 +7,21 @@ namespace Composer\Autoload;
 class ComposerStaticInit5203e2fa01a09798b077dec0c00656ec
 {
     public static $prefixLengthsPsr4 = array (
-        'b' => 
+        'B' => 
         array (
-            'bethojunior\\makeview\\' => 21,
+            'Bethojunior\\Partnerrepository\\' => 30,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'bethojunior\\makeview\\' => 
+        'Bethojunior\\Partnerrepository\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+    );
+
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -25,6 +29,7 @@ class ComposerStaticInit5203e2fa01a09798b077dec0c00656ec
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit5203e2fa01a09798b077dec0c00656ec::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit5203e2fa01a09798b077dec0c00656ec::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit5203e2fa01a09798b077dec0c00656ec::$classMap;
 
         }, null, ClassLoader::class);
     }
