@@ -3,8 +3,7 @@
     "description": "Laravel command to create applications in the partner repository",
     "version": "0.0.1",
     "require": {
-        "php": ">=7.4",
-        "bethojunior/partnerrepository": "^1.0"
+        "php": ">=7.4"
     },
     "autoload": {
         "psr-4": {
