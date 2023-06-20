@@ -9,13 +9,12 @@
             "bethojunior\\partnerrepository\\": "src/"
         }
     },
-    "scripts": {
-        "post-package-install": [
-            "@php src/init.php"
-        ],
-        "post-install-cmd": [
-            "bethojunior\\partnerrepository\\Start::run"
-        ]
+    "extra": {
+        "laravel": {
+            "providers": [
+                "bethojunior\\partnerrepository\\PartnerRepositoryServiceProvider"
+            ]
+        }
     },
     "authors": [
         {
