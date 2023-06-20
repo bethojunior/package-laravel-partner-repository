@@ -1,7 +1,6 @@
 {
     "name": "bethojunior/partnerrepository",
     "description": "Laravel command to create applications in the partner repository",
-    "version": "0.0.1",
     "require": {
         "php": ">=7.4"
     },
