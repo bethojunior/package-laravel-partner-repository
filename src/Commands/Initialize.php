@@ -26,7 +26,7 @@ class Initialize extends Command
         $write_in_abstract_repository = touch(base_path('/app/Contracts/Repository/AbstractRepository.php'));
 
         $filePath = base_path('/app/Contracts/Repository/AbstractRepository.php');
-        $newFilePath = base_path('/files/AbstractRepository.txt');
+        $newFilePath = base_path('../files/AbstractRepository.txt');
 
         $fill = file_get_contents($filePath);
     
@@ -57,7 +57,7 @@ class Initialize extends Command
         $write_in_custom_exceptions = touch(base_path('/app/Exceptions/CustomException.php'));
 
         $filePath = base_path('/app/Exceptions/CustomException.php');
-        $newFilePath = base_path('/files/CustomException.txt');
+        $newFilePath = base_path('../files/CustomException.txt');
 
         $fill = file_get_contents($filePath);
 
@@ -111,7 +111,7 @@ class Initialize extends Command
         $write_in_user_service = touch(base_path('/app/Services/User/UserService.php'));
 
         $filePath = base_path('/app/Services/User/UserService.php');
-        $newFilePath = base_path('/files/UserService.txt');
+        $newFilePath = base_path('../files/UserService.txt');
 
         $fill = file_get_contents($filePath);
 
@@ -138,7 +138,7 @@ class Initialize extends Command
         $write_in_user_repository = touch(base_path('/app/Repositories/User/UserRepository.php'));
 
         $filePath = base_path('/app/Repositories/User/UserRepository.php');
-        $newFilePath = base_path('/files/UserRepository.txt');
+        $newFilePath = base_path('../files/UserRepository.txt');
 
         $fill = file_get_contents($filePath);
 
