@@ -1,18 +1,18 @@
 {
-    "name": "bethojunior/partnerrepository",
-    "description": "Laravel command to create applications in the partner repository",
+    "name": "bethojunior/service-repository",
+    "description": "Laravel command to create applications in the service repository",
     "type": "library",
     "version": "1.0.0",
     "license": "GPL-3.0-or-later",
     "autoload": {
         "psr-4": {
-            "bethojunior\\partnerrepository\\": "src/"
+            "bethojunior\\servicerepository\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "bethojunior\\partnerrepository\\PartnerRepositoryServiceProvider"
+                "bethojunior\\servicerepository\\ServiceRepositoryServiceProvider"
             ]
         }
     },

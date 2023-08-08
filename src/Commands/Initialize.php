@@ -1,6 +1,6 @@
 <?php
 
-namespace bethojunior\partnerrepository\Commands;
+namespace bethojunior\servicerepository\Commands;
 
 use Illuminate\Console\Command;
 
@@ -31,6 +31,25 @@ class Initialize extends Command
         }
         
         $this->info('AbstractRepository created');
+        $this->info('----------------------------');
+        $this->info('Creating AbstractService');
+        $this->info('----------------------------');
+
+        $create_dir_abstract_repository = mkdir(base_path('/app/Contracts/Service/'), 0777, true);
+
+        if (!$create_dir_abstract_repository) {
+            $this->error('Error creating dir for AbstractService');
+            return;
+        }
+
+        $write_in_abstract_repository = touch(base_path('/app/Contracts/Repository/AbstractService.php'));
+
+        if (!$write_in_abstract_repository) {
+            $this->error('Error writing code in AbstractService');
+            return;
+        }
+
+        $this->info('AbstractService created');
         $this->info('----------------------------');
         $this->info('Creating CustomException');
         $this->info('----------------------------');
