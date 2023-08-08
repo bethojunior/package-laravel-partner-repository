@@ -42,7 +42,7 @@ class Initialize extends Command
             return;
         }
 
-        $write_in_abstract_repository = touch(base_path('/app/Contracts/Repository/AbstractService.php'));
+        $write_in_abstract_repository = touch(base_path('/app/Contracts/Service/AbstractService.php'));
 
         if (!$write_in_abstract_repository) {
             $this->error('Error writing code in AbstractService');
@@ -172,6 +172,14 @@ class Initialize extends Command
         file_put_contents($userRepository, $fillUserRepository);
 
         $this->info('UserService populated');
+        $this->info('----------------------------');
+
+        $userRepository = base_path('/app/Contracts/Service/AbstractService.php');
+        $textUserRepository = $path.'AbstractService.txt';
+        $fillUserRepository = file_get_contents($textUserRepository);
+        file_put_contents($userRepository, $fillUserRepository);
+
+        $this->info('AbstractService populated');
         $this->info('----------------------------');
 
 
