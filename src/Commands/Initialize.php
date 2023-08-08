@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class Initialize extends Command
 {
-    protected $signature = 'madgic:partner-repository';
+    protected $signature = 'madgic:service-repository';
     protected $description = 'Creating files for partner repository';
 
     public function handle()

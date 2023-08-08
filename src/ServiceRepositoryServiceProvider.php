@@ -3,7 +3,7 @@
 namespace bethojunior\servicerepository;
 
 use Illuminate\Support\ServiceProvider;
-use bethojunior\partnerrepository\Commands\Initialize;
+use bethojunior\servicerepository\Commands\Initialize;
 
 class ServiceRepositoryServiceProvider extends ServiceProvider
 {
