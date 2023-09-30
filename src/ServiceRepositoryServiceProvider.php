@@ -4,6 +4,7 @@ namespace bethojunior\servicerepository;
 
 use Illuminate\Support\ServiceProvider;
 use bethojunior\servicerepository\Commands\Initialize;
+use bethojunior\servicerepository\Commands\CreateService;
 
 class ServiceRepositoryServiceProvider extends ServiceProvider
 {
@@ -11,6 +12,7 @@ class ServiceRepositoryServiceProvider extends ServiceProvider
     {
         $this->commands([
             Initialize::class,
+            CreateService::class
         ]);
     }
 }

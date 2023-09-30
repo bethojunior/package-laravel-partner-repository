@@ -1,6 +1,6 @@
 {
     "name": "bethojunior/service-repository",
-    "description": "Laravel command to create applications in the service repository",
+    "description": "Laravel command to create applications in the repository pattern",
     "type": "library",
     "version": "1.0.0",
     "license": "GPL-3.0-or-later",
@@ -18,7 +18,7 @@
     },
     "authors": [
         {
-            "name": "bethojunior",
+            "name": "Betho Junior",
             "email": "hgomescostajr@gmail.com"
         }
     ],
