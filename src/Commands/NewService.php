@@ -4,7 +4,7 @@ namespace bethojunior\servicerepository\Commands;
 
 use Illuminate\Console\Command;
 
-class CreateService extends Command
+class NewService extends Command
 {
 
     protected $signature = 'madgic:create-service {service}';
