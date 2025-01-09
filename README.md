@@ -1,6 +1,8 @@
 <h1>Now just run the command</h1>
 <br>
-<b>php artisan madgic:partner-repository</b>
+```bash
+php artisan madgic:partner-repository
+```
 <br>
 <p>
 For create a new service in your application, run this command
